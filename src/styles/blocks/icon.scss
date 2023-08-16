@@ -1,47 +1,50 @@
 .icon {
   display: block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/icon-menu.svg");
+  background-size: cover;
 
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-decoration: none;
-
-  &__tooltip {
-    position: absolute;
-    right: 100%;
-    top: 25%;
-
-    width: max-content;
-    padding-right: 8px;
-
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #fff;
-    opacity: 0;
-
-    transition: opacity 0.3s;
-
-    &:hover &__tooltip {
-      opacity: 1;
-    }
+  @include onTablet {
+    width: 32px;
+    height: 32px;
   }
 
   &--phone {
-    background-image: url(../images/icon-phone.png);
-    right: 24px;
+    position: relative;
+    background-image: url("../images/icons/icon-phone.svg");
 
-    @include onTablet {
-      right: 32px;
+    &-tooltip {
+      position: absolute;
+      right: 100%;
+      top: 25%;
+
+      width: max-content;
+      padding-right: 20px;
+
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0;
+
+      transition: opacity 0.3s;
+    }
+
+    &:hover {
+      .icon--phone-tooltip {
+        opacity: 1;
+      }
     }
   }
 
   &--menu {
-    background-image: url(../images/icon-burger.png);
+    background-image: url("../images/icons/icon-menu.svg");
+
+    &:hover {
+      background-image: url("../images/icons/icon-menu-hover.svg");
+    }
   }
 }

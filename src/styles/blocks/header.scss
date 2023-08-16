@@ -1,25 +1,35 @@
 .header {
+  background-image: url(../images/image-bg.png);
   background-size: cover;
   background-position: 85%;
-  background-image: url(../images/cover_photo.jpg);
+
+  @include onTablet {
+    background-position: center;
+  }
 
   &__content {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
-    height: 100vh;
-    padding: 28px 0 88px;
   }
 
-  &__top {
-    @include top-actions;
+  &__bottom {
+    padding-bottom: 88px;
+
+    @include onTablet {
+      padding-bottom: 132px;
+    }
+
+    @include onDesktop {
+      padding-bottom: 200px;
+    }
   }
 
   &__title {
     text-align: center;
-    font-weight: 700;
     font-size: 36px;
+    font-weight: 700;
     line-height: 36px;
     letter-spacing: -1.5px;
 
