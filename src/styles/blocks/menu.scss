@@ -23,7 +23,7 @@
   &__phone-number {
     display: block;
     margin-bottom: 16px;
-    color: $menu-list-color;
+    color: $main-dark-color;
     text-decoration: none;
     line-height: 27px;
   }
@@ -31,12 +31,12 @@
   &__book-test-drive {
     display: block;
     width: fit-content;
-    color: $menu-list-color;
+    color: $main-dark-color;
     text-decoration: none;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 2px;
     padding-bottom: 8px;
-    border-bottom: 1px solid $menu-list-color;
+    border-bottom: 1px solid $main-dark-color;
   }
 }
