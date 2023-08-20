@@ -1,4 +1,7 @@
 @import "utils";
+//@import "utils/extends";
+//@import "utils/variables";
+
 @import "fonts";
 //@import "typography";
 @import "reset";
@@ -14,3 +17,5 @@
 @import "blocks/about-us";
 @import "blocks/products";
 @import "blocks/product";
+@import "blocks/details";
+@import "blocks/button";

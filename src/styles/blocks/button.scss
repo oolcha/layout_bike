@@ -1,0 +1,44 @@
+.button {
+  @include pageGrid;
+  &__details {
+    margin-top: 40px;
+
+    @include onTablet {
+      margin-top: 48px;
+    }
+
+    &-primary {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 56px;
+      padding: 0 48px;
+
+      font-weight: 700;
+      line-height: 27px;
+      color: $main-dark-color;
+      background-color: $main-text-color;
+      border-radius: 40px;
+      text-decoration: none;
+
+      @include onTablet {
+        grid-column: 2 / 6;
+        width: 392px;
+      }
+
+      @include onDesktop {
+        grid-column: 5 / 9;
+        width: 324px;
+      }
+
+      &:hover {
+        box-shadow: 1px 4px 16px 0 rgba(232, 232, 240, 0.4);
+      }
+
+      &:active {
+        box-shadow: 1px 4px 16px 0 rgba(232, 232, 240, 0.64);
+      }
+    }
+  }
+}

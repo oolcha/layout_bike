@@ -12,6 +12,10 @@
     @include onDesktop {
       grid-column: span 5;
     }
+
+    &-left {
+      text-align: left;
+    }
   }
 
   &__content {
