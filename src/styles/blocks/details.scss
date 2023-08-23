@@ -1,6 +1,9 @@
 .details {
+  @include pageGrid;
+
   &__wrapper {
     display: grid;
+    grid-column: 1 / -1;
     row-gap: 40px;
 
     @include onTablet {
@@ -8,8 +11,20 @@
     }
   }
 
-  //&__button {
-  //}
+  &__button {
+    margin-top: 48px;
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 2 / 6;
+      width: 392px;
+    }
+
+    @include onDesktop {
+      grid-column: 5 / 9;
+      width: 324px;
+    }
+  }
 
   .detail {
     &__photos {
@@ -52,6 +67,7 @@
     }
 
     &__title {
+      //grid-column: 1 / -1;
       margin-bottom: 8px;
       font-size: 24px;
       font-weight: 700;
