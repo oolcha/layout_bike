@@ -1,4 +1,5 @@
 .section-title {
+  grid-column: 1 / -1;
   margin-bottom: 48px;
   text-align: center;
   font-size: 32px;
@@ -11,7 +12,6 @@
   }
 
   @include onDesktop {
-    margin-bottom: 56px;
     font-size: 64px;
   }
 }

@@ -2,10 +2,10 @@
   @include pageGrid;
 
   &__title {
-    margin-bottom: 32px;
     grid-column: 1 / -1;
 
     @include onTablet {
+      margin-bottom: 0;
       grid-column: span 3;
     }
 
@@ -33,6 +33,6 @@
   &__info {
     font-size: 23px;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 140%;
   }
 }

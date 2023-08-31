@@ -23,12 +23,12 @@
       width: 100%;
       height: 48px;
       padding: 14px 16px;
-      color: #292929;
-      line-height: 20px;
-      border: none;
+      border: 1px solid transparent;
       border-radius: 40px;
       background: #f8f8fa;
       outline: none;
+
+      transition: border 0.5s;
 
       &:hover {
         border: 1px solid #d5d7de;
@@ -36,6 +36,15 @@
 
       &:focus {
         border: 1px solid #292929;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus {
+        border: 1px solid #d5d7de;
+        -webkit-text-fill-color: #292929;
+        -webkit-box-shadow: 0 0 0 1000px #f8f8fa inset;
+        transition: background-color 0.5s ease-in-out 0s;
       }
 
       &::placeholder {
@@ -46,25 +55,32 @@
       &--textarea {
         margin-bottom: 32px;
         height: 120px;
+        font-family: inherit;
         border-radius: 16px;
         resize: none;
-        font-family: inherit;
-      }
-    }
 
-    &-button {
-      @include onTablet {
-        margin-bottom: 120px;
-      }
-
-      @include onDesktop {
-        margin-bottom: 180px;
+        //&::-webkit-scrollbar {
+        //  width: 10px;
+        //}
+        //
+        //&::-webkit-scrollbar-track {
+        //  box-shadow: inset 0 0 5px #9393a3;
+        //  border-radius: 16px;
+        //}
+        //
+        //&::-webkit-scrollbar-thumb {
+        //  background: #b0b0b0;
+        //  border-radius: 10px;
+        //}
+        //
+        //&::-webkit-scrollbar-thumb:hover {
+        //  background: #191919;
+        //}
       }
     }
   }
 
   &__info {
-    margin-bottom: 120px;
     grid-column: 1 / -1;
 
     @include onTablet {
@@ -86,9 +102,14 @@
 
     &-link {
       color: $main-text-color;
-      font-size: 16px;
       font-weight: 500;
       text-decoration: none;
+
+      transition: color 0.5s;
+
+      &:hover {
+        color: #7e7e83;
+      }
     }
   }
 }

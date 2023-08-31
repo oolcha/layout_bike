@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Bike</title>
+    <link
+      rel="logo"
+      type="image/png"
+      href="images/logo-2x-white.png"
+    >
     <link rel="stylesheet" href="styles/styles.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -98,7 +103,7 @@
           </section>
 
           <section class="products" id="compare-bikes">
-            <h2 class="section-title">Compare bikes</h2>
+            <h2 class="section-title">Compare Bikes</h2>
 
             <div class="products__recommend">
               <article class="product products__product">
@@ -231,7 +236,7 @@
             <div class="contacts__container">
 
               <div class="contacts__form">
-                <form action="/">
+                <form action="/" onsubmit="this.reset(); return false;">
                   <input
                     name="name"
                     type="text"
@@ -252,7 +257,7 @@
                     class="contacts__form-field contacts__form-field--textarea"
                   ></textarea>
 
-                  <button class="button contacts__form-button">Send</button>
+                  <button class="button">Send</button>
                 </form>
               </div>
 
@@ -269,7 +274,11 @@
 
                 <div class="contacts__info-field">
                   <div class="contacts__info-title">Address</div>
-                  <a href="https://goo.gl/maps/uBQo1TZ2gAx54sBD6" class="contacts__info-link">
+                  <a
+                    href="https://goo.gl/maps/uBQo1TZ2gAx54sBD6"
+                    class="contacts__info-link"
+                    target="_blank"
+                  >
                     400 first ave.
                     <br>
                     suite 700

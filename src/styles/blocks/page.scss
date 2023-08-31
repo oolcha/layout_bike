@@ -8,8 +8,11 @@
 
   scroll-behavior: smooth;
 
+  &:has(.page__menu:target) {
+    overflow: hidden;
+  }
+
   &__body {
-    margin: 0;
     min-width: 320px;
   }
 
@@ -20,7 +23,7 @@
     left: 0;
 
     opacity: 0;
-    transition: all 0.8s;
+    transition: all 0.5s;
     transform: translateX(100%);
     pointer-events: none;
 
