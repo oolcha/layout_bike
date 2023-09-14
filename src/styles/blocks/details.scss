@@ -29,15 +29,12 @@
     &__photos {
       @include pageGrid;
       margin-bottom: 16px;
-      overflow: hidden;
     }
 
     &__link {
-      position: relative;
+      overflow: hidden;
 
       &--wide {
-        @include hover(transform, scale(1.05));
-
         @include onTablet {
           grid-column: span 4;
         }
@@ -48,11 +45,6 @@
       }
 
       &--square {
-        @include hover(transform, scale(1.1));
-
-        height: 0;
-        padding-bottom: 100%;
-
         @include onTablet {
           grid-column: span 2;
         }
@@ -64,10 +56,12 @@
     }
 
     &__photo {
-      position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @include hover(transform, scale(1.2));
+
     }
 
     &__title {

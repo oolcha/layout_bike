@@ -1,5 +1,7 @@
 .product {
-  overflow: hidden;
+  &__link {
+    overflow: hidden;
+  }
 
   &__photo {
     width: 100%;
